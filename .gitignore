@@ -8,3 +8,5 @@ node_modules
 *.tfvars
 terraform/.terraform/
 .terraform.lock.hcl
+
+.build

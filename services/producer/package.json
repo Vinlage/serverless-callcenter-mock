@@ -1,0 +1,19 @@
+{
+  "name": "producer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "send:one": "node index.js --once",
+    "send:burst": "node index.js --burst 20"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.882.0",
+    "dotenv": "^17.2.2",
+    "nanoid": "^5.1.5"
+  }
+}

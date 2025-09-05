@@ -43,7 +43,6 @@ resource "aws_dynamodb_table" "call_logs" {
   }
 }
 
-/*
 # --- Lambda packaging (from services/consumer) ---
 data "archive_file" "consumer_zip" {
   type        = "zip"
@@ -86,7 +85,7 @@ resource "aws_lambda_function" "consumer" {
     variables = {
       TABLE_NAME = aws_dynamodb_table.call_logs.name
       REGION     = var.region
-      ENDPOINT   = "http://localhost:4566"
+      ENDPOINT   = "http://host.docker.internal:4566"
     }
   }
 }
@@ -97,4 +96,3 @@ resource "aws_lambda_event_source_mapping" "sqs_to_lambda" {
   batch_size        = 10
   enabled           = true
 }
-*/

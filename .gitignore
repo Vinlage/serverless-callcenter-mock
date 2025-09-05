@@ -1,5 +1,6 @@
 .localstack
 .env
+node_modules
 
 # Terraform
 *.tfstate
